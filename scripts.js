@@ -42,12 +42,13 @@
       // Bottle rotates ~110deg clockwise — mouth swings from top down to point into glass
       setTimeout(() => {
         bottleG.style.transform = "rotate(110deg)";
-      }, 80);
+      }, 70);
   
       // stream grows downward from bottle mouth (now around y=90 area, x~107)
       setTimeout(() => {
-        stream.setAttribute("height", "55");
-      }, 1000);
+        stream.setAttribute("y", "105")
+        stream.setAttribute("height", "130");
+      }, 1050);
   
       // liquid rises in glass
       setTimeout(() => {
@@ -55,6 +56,18 @@
         liquidRect.setAttribute("height", "90");
       }, 1200);
   
+      //stream go off
+      setTimeout(() => {
+        stream.setAttribute("y", "105")
+        stream.setAttribute("height", "0");
+      }, 2800);
+
+      // bottle go straight and bye bye
+      setTimeout(() => {
+      bottleG.style.transform = "translateX(-300px) rotate(0deg)";
+    }, 3200);
+
+
       setTimeout(() => {
         serveText.textContent = "🍷 Your Premium Chullu is Ready!";
       }, 3200);
