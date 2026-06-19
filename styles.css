@@ -225,6 +225,7 @@
         inset: 0;
         background: rgba(0, 0, 0, 0.92);
         display: flex;
+        padding-bottom: 200px;
         justify-content: center;
         align-items: center;
         z-index: 9999;
